@@ -1,0 +1,17 @@
+name: isbn_searcher_dart
+description: ISBN lookup library for Dart and Flutter using Google Books and isbnsearch.org.
+version: 1.0.0
+homepage: https://github.com/berkbabadogan/isbn_searcher
+repository: https://github.com/berkbabadogan/isbn_searcher
+issue_tracker: https://github.com/berkbabadogan/isbn_searcher/issues
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  http: ^1.2.2
+  html: ^0.15.4
+  logbox_color: ^1.0.7
+
+dev_dependencies:
+  lints: ^5.0.0
