@@ -1,5 +1,5 @@
 [![pub.dev Version](https://img.shields.io/pub/v/isbn_searcher)](https://pub.dev/packages/isbn_searcher)
-[![License](https://img.shields.io/github/license/berkbabadogan/isbn_searcher?color=important)](https://pub.dev/packages/isbn_searcher)
+[![License](https://img.shields.io/github/license/berkbb/isbn_searcher?color=important)](https://github.com/berkbb/isbn_searcher/blob/main/LICENSE)
 
 # ISBN Searcher for Dart&Flutter
 
