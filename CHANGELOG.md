@@ -1,6 +1,10 @@
+## [1.0.3]
+
+* Changelog wording improved.
+
 ## [1.0.2]
 
-* Version bump.
+* Changelog wording improved.
 
 ## [1.0.1]
 
@@ -10,4 +14,4 @@
 ## [1.0.0]
 
 * Initial stable release.
-* Dart package for .NET `ISBNLibrary` published-ready.
+* Dart package for `ISBNLibrary` published-ready.

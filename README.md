@@ -17,7 +17,7 @@
 
 ```yaml
 dependencies:
-  isbn_searcher: ^1.0.2
+  isbn_searcher: ^1.0.3
 ```
 
 ## Usage
