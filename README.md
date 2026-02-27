@@ -1,39 +1,42 @@
-# isbn_searcher_dart
+[![pub.dev Version](https://img.shields.io/pub/v/isbn_searcher)](https://pub.dev/packages/isbn_searcher)
+[![License](https://img.shields.io/github/license/berkbabadogan/isbn_searcher?color=important)](https://pub.dev/packages/isbn_searcher)
 
-`isbn_searcher_dart`, .NET `ISBNLibrary` paketinin Dart/Flutter uyarlamasıdır.
+# ISBN Searcher for Dart&Flutter
+
+`isbn_searcher` is a Dart/Flutter library for searching book details by ISBN.
 
 ## Features
 
-- Google Books API ile ISBN arama
-- `isbnsearch.org` uzerinden ISBN arama
-- Sonuclari `ISBNElement` modeli ile donme
-- Listeyi HTML tabloya donusturme yardimcilari
+- Search books by ISBN via Google Books API
+- Search books by ISBN via `isbnsearch.org`
+- Return normalized data with the `ISBNElement` model
+- Generate HTML table output from result lists
+- Optional colored terminal logging with `logbox_color`
 
 ## Install
 
 ```yaml
 dependencies:
-  isbn_searcher_dart: ^0.1.0
+  isbn_searcher: ^1.0.0
 ```
 
 ## Usage
 
 ```dart
-import 'package:isbn_searcher_dart/isbn_searcher_dart.dart';
+import 'package:isbn_searcher/isbn_searcher.dart';
 
 Future<void> main() async {
   final googleBook = await Rest.getGoogleBookInfoAsync('9789750845987');
-  print(googleBook);
-
   final isbnSearchBook = await Rest.getISBNSearchHtmlAsync('9789750845987');
-  print(isbnSearchBook);
+
+  [googleBook, isbnSearchBook].printElements();
 }
 ```
 
 ## Notes
 
-- Bu kutuphane harici servisler kullandigi icin internet baglantisi gerektirir.
-- `isbnsearch.org` HTML yapisi degisirse parser guncellenmelidir.
+- This package depends on external services and requires an internet connection.
+- If `isbnsearch.org` changes its HTML structure, parsing logic may need updates.
 
 ## License
 

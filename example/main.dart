@@ -1,4 +1,4 @@
-import 'package:isbn_searcher_dart/isbn_searcher_dart.dart';
+import 'package:isbn_searcher/isbn_searcher.dart';
 
 Future<void> main() async {
   final book = await Rest.getGoogleBookInfoAsync('9789750845987');
