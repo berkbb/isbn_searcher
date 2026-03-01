@@ -6,9 +6,11 @@ import 'isbn_element.dart';
 import 'isbn_element_extensions.dart';
 import 'isbn_search_response.dart';
 
+/// Provides API operations for fetching book information.
 class Rest {
   static final http.Client _httpClient = http.Client();
 
+  /// Asynchronously retrieves ISBN information from the Google Books API.
   static Future<ISBNElement> getGoogleBookInfoAsync(String isbn) async {
     if (isbn.trim().isEmpty) {
       return ISBNElement.notFound('*');
@@ -73,6 +75,7 @@ class Rest {
     }
   }
 
+  /// Asynchronously retrieves ISBN information from ISBNSearch.org.
   static Future<ISBNElement> getISBNSearchHtmlAsync(String isbn) async {
     if (isbn.trim().isEmpty) {
       return ISBNElement.notFound('*');

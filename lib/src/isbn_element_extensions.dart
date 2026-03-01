@@ -3,7 +3,9 @@ import 'package:logbox_color/extensions.dart';
 
 import 'isbn_element.dart';
 
+/// Extensions for an [Iterable] of [ISBNElement].
 extension ISBNElementIterableExtensions on Iterable<ISBNElement> {
+  /// Prints the elements either as a plain string or with a formatted color box.
   void printElements({bool useColorBox = true}) {
     for (final element in this) {
       if (useColorBox) {
@@ -15,6 +17,7 @@ extension ISBNElementIterableExtensions on Iterable<ISBNElement> {
     }
   }
 
+  /// Generates a simple HTML table string displaying the elements.
   String makeHtmlTable() {
     final buffer = StringBuffer()
       ..write('<!DOCTYPE html><html><head><meta charset="utf-8"/>')
@@ -41,11 +44,13 @@ extension ISBNElementIterableExtensions on Iterable<ISBNElement> {
     return buffer.toString();
   }
 
-  // Legacy method alias.
+  /// Legacy method alias for [makeHtmlTable].
   String makeHTMLTable() => makeHtmlTable();
 }
 
+/// Extensions for a [List] of [String].
 extension StringListExtensions on List<String>? {
+  /// Compiles the array of strings into a single comma-separated string.
   String compileArrayInString() {
     final values = this;
     if (values == null) {

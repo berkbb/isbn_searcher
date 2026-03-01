@@ -3,9 +3,11 @@ import 'package:http/http.dart' as http;
 
 import 'isbn_element.dart';
 
+/// Helper class to fetch and parse ISBN search responses from ISBNSearch.org.
 class ISBNSearchResponse {
   static final http.Client _httpClient = http.Client();
 
+  /// Fetches the raw HTML body for an ISBN search.
   static Future<String> getHtmlFromIsbnSearch(String isbn) async {
     final url = Uri.parse('https://isbnsearch.org/isbn/$isbn');
     final response = await _httpClient.get(url);
@@ -19,6 +21,7 @@ class ISBNSearchResponse {
     return response.body;
   }
 
+  /// Parses the HTML body and returns an [ISBNElement].
   static Future<ISBNElement> parseBookInfo(
     String html, {
     String fallbackIsbn = '*',
