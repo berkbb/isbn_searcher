@@ -86,7 +86,7 @@ class Rest {
       final html = await ISBNSearchResponse.getHtmlFromIsbnSearch(
         normalizedIsbn,
       );
-      return ISBNSearchResponse.parseBookInfo(
+      return await ISBNSearchResponse.parseBookInfo(
         html,
         fallbackIsbn: normalizedIsbn,
       );

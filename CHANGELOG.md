@@ -1,3 +1,7 @@
+## [1.0.5]
+
+- Fixed static analysis warning by awaiting `ISBNSearchResponse.parseBookInfo` inside `try` block in `Rest.getISBNSearchHtmlAsync`.
+
 ## [1.0.4]
 
 - Added missing documentation comments to meet pub.dev criteria.
